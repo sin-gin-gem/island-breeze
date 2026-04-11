@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --aruba-blue: #008ECF;
+    --island-green: #2ecc71;
+    --aruba-yellow: #FFD200;
+    --aruba-red: #ED1B2F;
+    --sand-white: #ffffff;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f9ff;
+    color: #333;
+}
+
+h1, h2, .logo {
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Nav with Blue/Green Gradient underline */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: white;
+    border-bottom: 5px solid var(--aruba-blue);
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--aruba-blue);
+}
+
+.logo span { color: var(--island-green); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
+
+/* Hero with Ocean and Turtle Vibe */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1502085671122-2d218cd434e6?auto=format&fit=crop&w=1350&q=80'); /* Ocean/White sand vibe */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 { font-size: 4rem; margin-top: 10px; }
+
+.mini-flag {
+    width: 60px;
+    height: 40px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Aruba.svg');
+    background-size: cover;
+    border: 2px solid white;
+}
+
+.btn {
+    background: var(--aruba-yellow);
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Menu Grid */
+.menu-section { padding: 50px 10%; text-align: center; }
+.menu-section h2 { color: var(--aruba-blue); font-size: 2.5rem; margin-bottom: 30px; }
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border-top: 8px solid var(--island-green);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.category { color: var(--aruba-blue); font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+
+.price { color: var(--aruba-red); font-weight: bold; font-size: 1.2rem; display: block; margin-top: 10px; }
+
+/* Delivery Section */
+.delivery-card {
+    background: var(--aruba-blue);
+    color: white;
+    padding: 40px;
+    margin: 50px 10%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.delivery-btn {
+    background: white;
+    color: var(--aruba-blue);
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer with Flag */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #f0f0f0;
+}
+
+.footer-flag { width: 100px; margin-bottom: 10px; border: 1px solid #ddd; }
