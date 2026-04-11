@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Aruba Flag Inspired Palette */
+    --light-blue: #008ECF;  /* Aruba Sea Blue */
+    --vibrant-yellow: #FFD200; /* Flag Stripe Yellow */
+    --coral-red: #ED1B2F; /* Flag Star Red */
+    --white-sand: #FBFDFE;
+    --main-text: #2c3e50;
+    --soft-sand: #F4F1EA;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--main-text);
+    background-color: var(--white-sand);
+    line-height: 1.6;
+}
+
+/* Typography Swap */
+h1, h2, .logo {
+    font-family: 'Fredoka', sans-serif; /* Rounded and friendly */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 142, 207, 0.1);
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--light-blue);
+    font-weight: 600;
+}
+
+.logo span { color: var(--vibrant-yellow); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 25px; }
+nav ul li a { text-decoration: none; color: var(--main-text); font-weight: 600; transition: 0.3s; }
+nav ul li a:hover { color: var(--light-blue); border-bottom: 2px solid var(--vibrant-yellow); }
+
+/* Hero Section - Beach Vibe */
+.hero {
+    height: 75vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1590089415225-403ed3f57a70?auto=format&fit=crop&w=1350&q=80'); /* Beautiful Aruba beach with blue water/sand */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 5px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: var(--light-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+.btn:hover { transform: translateY(-3px); background: #0077ae; }
+
+/* Menu Section - Light and Airy */
+.menu-section {
+    padding: 100px 10%;
+    background-color: var(--white-sand);
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 3rem;
+    color: var(--light-blue);
+    margin-bottom: 60px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.menu-item {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 142, 207, 0.08);
+    position: relative;
+    border-left: 6px solid var(--light-blue);
+    text-align: left;
+}
+
+/* Aruba Colors in Details */
+.menu-item:nth-child(even) { border-left-color: var(--vibrant-yellow); }
+
+.badge {
+    position: absolute;
+    top: -15px;
+    right: 25px;
+    background: var(--coral-red);
+    color: white;
+    padding: 6px 18px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.special-side { background-color: var(--soft-sand); border-left-color: #f1c40f; }
+
+.menu-item h3 { margin-bottom: 12px; color: var(--main-text); font-size: 1.5rem; }
+.price { display: block; margin-top: 20px; color: var(--light-blue); font-weight: bold; font-size: 1.5rem; }
+
+/* Delivery Section */
+.delivery-section {
+    background-color: var(--soft-sand);
+    padding: 80px 10%;
+    margin-top: 50px;
+}
+
+.delivery-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.delivery-text h2 {
+    color: var(--main-text);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.delivery-icons {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.delivery-icons img {
+    height: 35px;
+    width: auto;
+    opacity: 0.7;
+}
+
+.delivery-btn {
+    background: var(--vibrant-yellow);
+    color: var(--main-text);
+    margin-top: 0;
+}
+
+.delivery-btn:hover { background: #f1c40f; color: white;}
+
+/* Footer with Flag */
+footer {
+    background: var(--light-blue);
+    color: white;
+    text-align: center;
+    padding: 60px 10%;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.aruba-flag {
+    width: 80px;
+    height: 50px;
+    background-color: var(--light-blue);
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.flag-stripe { height: 10%; background-color: var(--vibrant-yellow); }
+.flag-stripe.yellow { top: 75%; position: absolute; width: 100%; }
+.field { height: 100%; }
+.flag-star {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--coral-red);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
